@@ -54,7 +54,7 @@ Sub AnalyzeStockData()
         'Calculate total volume stock for each ticker
         If Cells(I, 1).Value = Cells(I + 1, 1).Value Then
             Stock_Volume = Stock_Volume + Cells(I, 7).Value
-        Else 'calculte data and save them to excel sheet
+        Else
             Stock_Volume = Stock_Volume + Cells(I, 7).Value
             StockPrice_Close = Cells(I, 6).Value
             Yearly_Change = StockPrice_Close - StockPrice_Open
@@ -82,8 +82,8 @@ Sub AnalyzeStockData()
     Next I
     
      
-    'Calculate greatest increase
-        GPctIncrese = Cells(2, 11).Value
+        'Calculate greatest increase
+        Greatest_Increase = Cells(2, 11).Value
         For I = 3 To Ticker_Counter
     
             If Cells(I, 11).Value > Greatest_Increase Then
