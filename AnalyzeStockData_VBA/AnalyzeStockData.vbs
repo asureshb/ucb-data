@@ -38,10 +38,16 @@ Sub AnalyzeStockData()
     Dim Greatest_Decrease As Double
     Dim Greatest_Total_Volume As Double
  
+    ' Label new colums and rows to fill up the analyzed stock data
     Range("I1").Value = "Ticker"
     Range("J1").Value = "Yearly Change"
     Range("K1").Value = "Percent Change"
     Range("L1").Value = "Total Stock Volume"
+    Range("P1").Value = "Ticker"
+    Range("Q1").Value = "Value"
+    Range("O2").Value = "Greatest % Increase"
+    Range("O3").Value = "Greatest % Decrease"
+    Range("O4").Value = "Greatest Total Volume"
     
     Total_Records = Cells(Rows.Count, 1).End(xlUp).Row
     StockPrice_Open = Cells(2, 3).Value
@@ -92,9 +98,6 @@ Sub AnalyzeStockData()
             End If
         Next I
         
-        Range("P1").Value = "Ticker"
-        Range("Q1").Value = "Value"
-        Range("O2").Value = "Greatest % Increase"
         Range("P2").Value = ticker
         Range("Q2").Value = Greatest_Increase
         Range("Q2").NumberFormat = "0.00%"
@@ -109,7 +112,6 @@ Sub AnalyzeStockData()
         Next I
       
         
-        Range("O3").Value = "Greatest % Decrease"
         Range("P3").Value = ticker
         Range("Q3").Value = Greatest_Decrease
         Range("Q3").NumberFormat = "0.00%"
@@ -124,6 +126,5 @@ Sub AnalyzeStockData()
         Next I
         
         Range("P4").Value = ticker
-        Range("O4").Value = "Greatest Total Volume"
         Range("Q4").Value = Greatest_Total_Volume
 End Sub
