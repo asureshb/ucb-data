@@ -1,8 +1,8 @@
 #!/usr/local/bin/python
 
 #
-#  PyBoss/main.py is to format employee records
-#  Syntax: python PyParagraph/main.py <csv_file_path> <output_file_path>
+#  PyParagraph/main.py is to calculate and display text metrics
+#  Syntax: python PyParagraph/main.py <text_file_path>
 #
 
 #import all required modules here
